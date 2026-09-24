@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automatizador de Escalas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Automatizador de Escalas</h1>
+
+        <p class="subtitulo">
+            Leia o PDF e encontre a escala de um determinado dia.
+        </p>
+
+
+        <div class="upload">
+
+            <label for="arquivoPDF">
+                📄 Escolha o PDF da escala
+            </label>
+
+            <input
+                type="file"
+                id="arquivoPDF"
+                accept=".pdf"
+            >
+
+        </div>
+
+
+        <div class="data-area">
+
+            <label for="dataEscala">
+                📅 Data da escala
+            </label>
+
+            <input
+                type="text"
+                id="dataEscala"
+                placeholder="Ex: 24/09"
+            >
+
+        </div>
+
+
+        <button id="botaoLer">
+            🔎 Ler escala
+        </button>
+
+
+        <div id="status">
+            Aguardando PDF...
+        </div>
+
+
+        <div id="resultado">
+
+            <h2>Escala encontrada</h2>
+
+            <div id="escala"></div>
+
+        </div>
+
+
+        <div class="lembrete">
+
+            <h2>🔔 Lembrete</h2>
+
+            <div id="textoLembrete">
+                Nenhum lembrete gerado.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
